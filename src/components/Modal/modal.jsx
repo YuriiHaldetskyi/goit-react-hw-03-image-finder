@@ -2,8 +2,13 @@ import { Component } from 'react';
 import { ModalWindow, BackDrop, ButtonClose } from './modal.styled';
 import { createPortal } from 'react-dom';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
+import PropTypes from 'prop-types';
 
 export class Modal extends Component {
+  static propTypes = {
+    onClose: PropTypes.func.isRequired,
+  };
+
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
   }

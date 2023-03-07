@@ -21,11 +21,3 @@ export class App extends Component {
     );
   }
 }
-//  import { Formik } from 'formik';
-//  import PropTypes from 'prop-types';
-//  import styled from '@emotion/styled'
-//  import * as yup from 'yup';
-
-// Доробити модалку
-// Зробити кнопку Load More
-// Доробити PropTypes в 2-х домашках

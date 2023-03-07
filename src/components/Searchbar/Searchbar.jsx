@@ -1,8 +1,14 @@
 import { Header, Button, Label, Field, Form } from './Searchbar.styled';
 import { Formik, ErrorMessage } from 'formik';
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Searchbar extends Component {
+  static propTypes = {
+    topic: PropTypes.string,
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     topic: '',
   };
