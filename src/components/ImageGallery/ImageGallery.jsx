@@ -66,7 +66,12 @@ export class ImageGallery extends Component {
       return <Loader />;
     }
     if (status === 'rejected') {
-      return <h2> {error.message}</h2>;
+      return (
+        <h2>
+          {' '}
+          {error ? error.message : `Sorry i dont find ${this.props.topic}`}
+        </h2>
+      );
     }
     if (status === 'resolved') {
       return (
@@ -77,7 +82,7 @@ export class ImageGallery extends Component {
                 return <ImageGalleryItem key={item.id} item={item} />;
               })}
           </Gallery>
-          <Button onClick={this.loadMore} />
+          {topic.length <= 12 ? '' : <Button onClick={this.loadMore} />}
         </>
       );
     }
